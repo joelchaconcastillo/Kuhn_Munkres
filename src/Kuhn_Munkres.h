@@ -134,7 +134,7 @@ void KuhnMunkres(vector<int> &assignament, vector<vector<double> > &costs)
 {
   int N = (int)costs.size(), cols_covered_count;
   vector<vector<int> > state(N, vector<int>(N, NONE));// 0: astrid,1: prime, 2: none
-  vector<vector<bool> > covered_astrid(4, vector<bool>(N, false)); //0: row_astrid, 1:col_astrid, 2:row_covered, 3:col_covered
+  vector<vector<bool> > covered_astrid(2, vector<bool>(N, false)); //0: row_astrid, 1:col_astrid, 2:row_covered, 3:col_covered
 
   step_1_2(costs, state);
   cols_covered_count = step_3(covered_astrid, state);
